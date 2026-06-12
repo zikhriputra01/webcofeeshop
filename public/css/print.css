@@ -1,0 +1,151 @@
+/* Thermal Receipt Print Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: #000000;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.receipt-wrapper {
+    max-width: 320px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.store-name {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.store-info {
+    font-size: 11px;
+    margin-top: 4px;
+    line-height: 1.3;
+}
+
+.divider {
+    border-top: 1px dashed #000000;
+    margin: 10px 0;
+}
+
+.info-table, .items-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.info-table td {
+    padding: 2px 0;
+}
+
+.info-table td:nth-child(even) {
+    text-align: right;
+}
+
+.items-table th {
+    text-align: left;
+    border-bottom: 1px dashed #000000;
+    padding-bottom: 5px;
+}
+
+.items-table td {
+    padding: 4px 0;
+    vertical-align: top;
+}
+
+.items-table .price-col {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.totals-wrapper {
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+.totals-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+}
+
+.totals-row.grand-total {
+    font-size: 13px;
+    font-weight: bold;
+    border-top: 1px dashed #000000;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+.receipt-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 10px;
+}
+
+/* Print Specific Configuration */
+@media print {
+    body {
+        background: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .receipt-wrapper {
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    @page {
+        size: 58mm auto;
+        margin: 0;
+    }
+}
+
+/* Screen Action Controls */
+.no-print {
+    max-width: 320px;
+    margin: 20px auto 0;
+    display: flex;
+    gap: 8px;
+}
+
+.no-print-btn {
+    flex: 1;
+    padding: 10px;
+    background-color: var(--coffee, #8B5E3C);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.no-print-btn.back-btn {
+    background-color: #e2e8f0;
+    color: #333333;
+    border: 1px solid #cbd5e1;
+    text-decoration: none;
+}
