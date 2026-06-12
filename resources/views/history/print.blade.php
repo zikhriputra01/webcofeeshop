@@ -87,7 +87,7 @@
         
         <div class="receipt-footer">
             Terima Kasih Atas Kunjungan Anda<br>
-            Brew & Co. - Rasa Kopi Terbaik
+            {{ $storeInfo['nama_toko'] }} - Rasa Kopi Terbaik
         </div>
     </div>
 

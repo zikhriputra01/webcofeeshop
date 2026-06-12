@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masuk - Brew & Co. Sistem Kasir</title>
+    <title>Masuk - {{ \App\Models\Setting::getValue('nama_toko', 'Brew & Co.') }} - Sistem Kasir</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
                 <div class="login-logo">
                     <i class="ti ti-coffee"></i>
                 </div>
-                <h2 class="login-title">Brew & Co.</h2>
+                <h2 class="login-title">{{ \App\Models\Setting::getValue('nama_toko', 'Brew & Co.') }}</h2>
                 <p class="login-subtitle">Sistem Kasir Coffee Shop</p>
             </div>
             
